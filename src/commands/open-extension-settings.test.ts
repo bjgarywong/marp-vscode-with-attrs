@@ -9,7 +9,7 @@ describe('openExtensionSettings command', () => {
 
     expect(commands.executeCommand).toHaveBeenCalledWith(
       'workbench.action.openSettings',
-      '@ext:marp-team.marp-vscode',
+      '@ext:bjgarywong.marp-vscode-with-attrs', // [GARY FORK] Updated extension identifier to match the forked version
     )
   })
 })

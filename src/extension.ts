@@ -1,4 +1,5 @@
 import { Marp } from '@marp-team/marp-core'
+import markdownItAttrs from 'markdown-it-attrs-dsl' // [GARY FORK] import markdown-it-attrs-ext plugin
 import { commands, Diagnostic, workspace } from 'vscode'
 import type { ExtensionContext, Uri, WebviewPanel } from 'vscode'
 import * as exportCommand from './commands/export'
@@ -71,6 +72,9 @@ export const getExtendMarkdownIt = ({
           .use(contentSection)
           .use(outline)
           .use(lineNumber)
+
+        // [GARY FORK]: Inject markdown-it-attrs-ext plugin to support custom attributes in markdown
+        marp.markdown.use(markdownItAttrs)
 
         // Switch rules
         if (!(marpConfiguration().get<boolean>('outlineExtension') ?? true)) {

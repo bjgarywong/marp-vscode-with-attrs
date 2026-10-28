@@ -1,8 +1,8 @@
 {
-  "name": "marp-vscode",
-  "displayName": "Marp for VS Code",
-  "publisher": "marp-team",
-  "version": "3.4.1",
+  "name": "marp-vscode-with-attrs",
+  "displayName": "Marp for VS Code with Attrs Support",
+  "publisher": "bjgarywong",
+  "version": "3.4.1-0.1.0",
   "description": "Create slide deck written in Marp Markdown on VS Code",
   "categories": [
     "Other"
@@ -442,7 +442,8 @@
     "yaml": "^2.8.2"
   },
   "dependencies": {
-    "@marp-team/marp-cli": "^4.3.1"
+    "@marp-team/marp-cli": "^4.3.1",
+    "markdown-it-attrs-dsl": "^0.1.0"
   },
   "overrides": {
     "yauzl": "^3.2.1"
